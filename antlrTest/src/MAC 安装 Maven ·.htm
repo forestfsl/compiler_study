@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<!-- saved from url=(0065)https://wangxin1248.github.io/life/2020/02/mac-install-maven.html -->
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <link rel="stylesheet" href="./MAC 安装 Maven ·_files/normalize.css">
+  <link rel="stylesheet" href="./MAC 安装 Maven ·_files/bulma.css">
+  <link rel="stylesheet" href="./MAC 安装 Maven ·_files/custom.css">
+  <link rel="stylesheet" href="./MAC 安装 Maven ·_files/syntax.css">
+  <link rel="stylesheet" href="./MAC 安装 Maven ·_files/font-awesome.min.css">
+  <link href="./MAC 安装 Maven ·_files/css" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="shortcut icon" href="https://wangxin1248.github.io/assets/images/icon-xin.png">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="https://wangxin1248.github.io/atom.xml">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="https://wangxin1248.github.io/atom.xml">
+  
+  <title>
+    
+      MAC 安装 Maven · 王鑫的个人博客
+    
+  </title>
+  
+<script type="text/javascript" async="" src="./MAC 安装 Maven ·_files/analytics.js"></script><script async="" src="./MAC 安装 Maven ·_files/js"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-101239613-1');
+</script><script type="text/javascript" async="" src="./MAC 安装 Maven ·_files/embed.js"></script><link rel="prefetch" as="style" href="https://c.disquscdn.com/next/embed/styles/lounge.5c5dad4ae74bbb3422efd01116dc45e6.css"><link rel="prefetch" as="script" href="https://c.disquscdn.com/next/embed/common.bundle.7d87bb8040158de8c0a9cf48216dcb06.js"><link rel="prefetch" as="script" href="https://c.disquscdn.com/next/embed/lounge.bundle.907072d563117313785716c7fb3237d9.js"><link rel="prefetch" as="script" href="https://disqus.com/next/config.js"><script src="./MAC 安装 Maven ·_files/alfalfalfa.0823c767a3bc925f628afd9bed26c958.js" async="" charset="UTF-8"></script></head>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+<!-- Google analytics -->
+
+
+<body>
+
+<section class="hero is-dark">
+  <div class="hero-body">
+    <div class="container">
+        <h1 class="title">
+          <!-- 网站顶部提示信息 -->
+          <span class="typewrite" data-period="2000" data-type="[ &quot;Hello,World&quot;,&quot;你好，世界&quot;]"><span class="wrap">Hello,World</span></span>
+        </h1>
+      <h4 class="subtitle" id="quote">Until you make peace with who you are, you’ll never be content with what you have.
+</h4>
+    </div>
+  </div>
+</section>
+
+<div class="main-container">
+  <div class="tile is-ancestor is-vertical">
+
+
+    <!-- 顶部部分 -->
+    <nav class="nav has-shadow">
+
+      <div class="nav-left">
+
+        <a href="https://wangxin1248.github.io/" class="nav-item">
+          <span class="icon">
+            <i class="fa fa-home" aria-hidden="true" title="Homepage"></i>
+          </span>
+        </a>
+
+        <a href="https://github.com/wangxin1248" class="nav-item">
+          <span class="icon">
+            <i class="fa fa-github" aria-hidden="true" title="Github"></i>
+          </span>
+        </a>
+        <!-- 搜索栏 -->
+        <!-- <div class="nav-item" id="searchFieldNav">
+          <div class="field has-addons">
+            <p class="control">
+              <input class="input is-small" type="text" placeholder="Find an article" id="search-text">
+            </p>
+            <p class="control">
+              <a class="button is-dark is-small" onclick="searchHandler();">
+                Search
+              </a>
+            </p>
+          </div>
+        </div> -->
+
+      </div>
+
+      <div class="nav-right nav-menu" id="nav-menu">
+        <a href="https://wangxin1248.github.io/archive" class="nav-item">Archive</a>
+        <a href="https://wangxin1248.github.io/categories" class="nav-item">Categories</a>
+        <a href="https://wangxin1248.github.io/tags" class="nav-item">Tags</a>
+      </div>
+
+      <span class="nav-toggle" id="nav-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+    </span></nav>
+
+    <div class="tile is-parent">
+      <!-- 文章部分 -->
+      <div class="tile is-8 is-child main">
+
+        <!-- 回到顶部 -->
+<script>
+    $("#back-top").hide();
+  $(document).ready(function () {
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 100) {
+        $('#back-top').fadeIn();
+      } else {
+        $('#back-top').fadeOut();
+      }
+    });
+    $('#back-top a').click(function () {
+      $('body,html').animate({
+        scrollTop: 0
+      }, 800);
+      return false;
+    });
+  });
+  </script>
+  
+<style type="text/css">
+      #back-top {
+        position: fixed;
+        bottom: 30px;
+        margin-left: 1000px;
+      }
+      #back-top a {
+        width: 150px;
+        height: 195px;
+        display: block;
+        background: #ffffff url(/assets/images/bg_up_arrow.png) no-repeat center center;
+        background-color: #ffffff;
+        -webkit-border-radius: 7px;
+        -moz-border-radius: 7px;
+        border-radius: 7px;
+        -webkit-transition: 1s;
+        -moz-transition: 1s;
+        transition: 1s;
+      }
+      #back-top a:hover {
+        background-color: #ffffff;
+      }
+</style>
+
+<div class="box">
+    <h1 class="post-title">MAC 安装 Maven</h1>
+    <span class="post-meta">29 February, 2020. It was a Saturday.  <span id="busuanzi_container_page_pv" style="display: inline;">
+        <div align="left">view: <span id="busuanzi_value_page_pv">643</span></div>
+      </span><a style="color:grey" href="https://wangxin1248.github.io/life/2020/02/mac-install-maven.html#disqus_thread"></a></span><hr>
+    <span class="post-text"><h1 id="mac-安装-maven">MAC 安装 Maven</h1>
+
+<h2 id="下载-maven">下载 Maven</h2>
+
+<p>首先从 Maven 官方地址：<a href="http://maven.apache.org/download.cgi">http://maven.apache.org/download.cgi</a> 下载最新版本apache-maven-xxx-bin.tar.gz</p>
+
+<p>加下来将下载的文件解压到 /usr/local/maven 下。</p>
+
+<h2 id="配置环境变量">配置环境变量</h2>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>vi ~/.bash_profile
+</code></pre></div></div>
+
+<p>添加如下的 maven 配置：</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">M3_HOME</span><span class="o">=</span>/usr/local/maven/apache-maven-3.6.3
+<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$M3_HOME</span>/bin:<span class="nv">$PATH</span>
+</code></pre></div></div>
+
+<p>执行如下命令使配置的环境变量生效：</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">source</span> ~/.bash_profile
+</code></pre></div></div>
+
+<h2 id="测试-maven-是否安装成功">测试 Maven 是否安装成功</h2>
+
+<p>可以先输出 Maven 环境地址</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">echo</span> <span class="nv">$M3_HOME</span>
+<span class="nv">$ </span><span class="nb">echo</span> <span class="nv">$PATH</span>
+</code></pre></div></div>
+
+<p>如果输出类似这样的值则表明配置没问题。</p>
+
+<div class="language-s highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">maven</span><span class="o">/</span><span class="n">apache</span><span class="o">-</span><span class="n">maven</span><span class="m">-3.6.3</span><span class="w">
+</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">maven</span><span class="o">/</span><span class="n">apache</span><span class="o">-</span><span class="n">maven</span><span class="m">-3.6.3</span><span class="o">/</span><span class="n">bin</span><span class="o">:/</span><span class="n">Users</span><span class="o">/</span><span class="n">wx</span><span class="o">/</span><span class="n">library</span><span class="o">/</span><span class="n">flutter</span><span class="o">/</span><span class="n">bin</span><span class="o">:/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">coreutils</span><span class="o">/</span><span class="n">libexec</span><span class="o">/</span><span class="n">gnubin</span><span class="o">:/</span><span class="n">Users</span><span class="o">/</span><span class="n">wx</span><span class="o">/</span><span class="n">library</span><span class="o">/</span><span class="n">flutter</span><span class="o">/</span><span class="n">bin</span><span class="o">:/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">coreutils</span><span class="o">/</span><span class="n">libexec</span><span class="o">/</span><span class="n">gnubin</span><span class="o">:/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">bin</span><span class="o">:/</span><span class="n">usr</span><span class="o">/</span><span class="n">bin</span><span class="o">:/</span><span class="n">bin</span><span class="o">:/</span><span class="n">usr</span><span class="o">/</span><span class="n">sbin</span><span class="o">:/</span><span class="n">sbin</span><span class="o">:/</span><span class="n">Applications</span><span class="o">/</span><span class="n">VMware</span><span class="w"> </span><span class="n">Fusion.app</span><span class="o">/</span><span class="n">Contents</span><span class="o">/</span><span class="n">Public</span><span class="o">:/</span><span class="n">Library</span><span class="o">/</span><span class="n">TeX</span><span class="o">/</span><span class="n">texbin</span><span class="o">:/</span><span class="n">Library</span><span class="o">/</span><span class="n">Frameworks</span><span class="o">/</span><span class="n">Mono.framework</span><span class="o">/</span><span class="n">Versions</span><span class="o">/</span><span class="n">Current</span><span class="o">/</span><span class="n">Commands</span><span class="w">
+</span></code></pre></div></div>
+
+<p>接下来用maven 的命令查看 maven 版本，鉴定Maven 环境是否安装成功。</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>mvn <span class="nt">-version</span>
+</code></pre></div></div>
+
+<p>成功时，输出的日志如下：</p>
+
+<div class="language-s highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Apache</span><span class="w"> </span><span class="n">Maven</span><span class="w"> </span><span class="m">3.6.3</span><span class="w"> </span><span class="p">(</span><span class="n">cecedd343002696d0abb50b32b541b8a6ba2883f</span><span class="p">)</span><span class="w">
+</span><span class="n">Maven</span><span class="w"> </span><span class="n">home</span><span class="o">:</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">maven</span><span class="o">/</span><span class="n">apache</span><span class="o">-</span><span class="n">maven</span><span class="m">-3.6.3</span><span class="w">
+</span><span class="n">Java</span><span class="w"> </span><span class="n">version</span><span class="o">:</span><span class="w"> </span><span class="m">1.8.0</span><span class="err">_</span><span class="m">172</span><span class="p">,</span><span class="w"> </span><span class="n">vendor</span><span class="o">:</span><span class="w"> </span><span class="n">Oracle</span><span class="w"> </span><span class="n">Corporation</span><span class="p">,</span><span class="w"> </span><span class="n">runtime</span><span class="o">:</span><span class="w"> </span><span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Java</span><span class="o">/</span><span class="n">JavaVirtualMachines</span><span class="o">/</span><span class="n">jdk1.8.0_172.jdk</span><span class="o">/</span><span class="n">Contents</span><span class="o">/</span><span class="n">Home</span><span class="o">/</span><span class="n">jre</span><span class="w">
+</span><span class="n">Default</span><span class="w"> </span><span class="n">locale</span><span class="o">:</span><span class="w"> </span><span class="n">zh_CN</span><span class="p">,</span><span class="w"> </span><span class="n">platform</span><span class="w"> </span><span class="n">encoding</span><span class="o">:</span><span class="w"> </span><span class="n">UTF</span><span class="m">-8</span><span class="w">
+</span><span class="n">OS</span><span class="w"> </span><span class="n">name</span><span class="o">:</span><span class="w"> </span><span class="s2">"mac os x"</span><span class="p">,</span><span class="w"> </span><span class="n">version</span><span class="o">:</span><span class="w"> </span><span class="s2">"10.15.3"</span><span class="p">,</span><span class="w"> </span><span class="n">arch</span><span class="o">:</span><span class="w"> </span><span class="s2">"x86_64"</span><span class="p">,</span><span class="w"> </span><span class="n">family</span><span class="o">:</span><span class="w"> </span><span class="s2">"mac"</span><span class="w">
+</span></code></pre></div></div>
+
+<p>这样，Mac 下 Maven 的环境就配置成功。</p>
+</span>
+</div>
+
+<!-- 回到顶部 -->
+<div id="back-top">
+    <a href="https://wangxin1248.github.io/life/2020/02/mac-install-maven.html#top" title="回到顶部"></a>
+</div>
+
+
+
+
+  <div id="disqus_thread"><iframe id="dsq-app8070" name="dsq-app8070" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%" src="./MAC 安装 Maven ·_files/saved_resource.html" style="width: 1px !important; min-width: 100% !important; border: none !important; overflow: hidden !important; height: 791px !important;" horizontalscrolling="no" verticalscrolling="no"></iframe></div>
+<script type="text/javascript">
+    
+    
+    var disqus_shortname = 'wangxin1248'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+      </div>
+      <!-- 信息框部分 -->
+      <div class="tile is-4 is-child">
+        <div class="tile is-parent is-vertical sidebar">
+
+          <!-- 个人头像 -->
+          <div class="tile is-child widget">
+            <div class="card">
+              <header class="card-header">
+                <p class="card-header-title nice-title">
+                  Sponsored
+                </p>
+              </header>
+              <div class="card-content">
+                <div class="content nice-text">
+                    <a href="https://wangxin1248.github.io/resume.html"><img class="resume_img" src="./MAC 安装 Maven ·_files/web_hi_res_512.jpg"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 文章分类 -->
+          <div class="tile is-child widget">
+
+            <div class="card">
+              <header class="card-header">
+                <p class="card-header-title nice-title">
+                  Article classification
+                </p>
+              </header>
+              <div class="card-content">
+                <div class="content nice-text">
+                  
+                  <ul class="categories_box inline">
+                      
+                    
+
+
+  
+     
+    	<li><a href="https://wangxin1248.github.io/categories#Life-ref">
+    		Life <span>11</span>
+    	</a></li>
+     
+    	<li><a href="https://wangxin1248.github.io/categories#Algorithm-ref">
+    		Algorithm <span>200</span>
+    	</a></li>
+     
+    	<li><a href="https://wangxin1248.github.io/categories#Jekyll-ref">
+    		Jekyll <span>2</span>
+    	</a></li>
+     
+    	<li><a href="https://wangxin1248.github.io/categories#Linux-ref">
+    		Linux <span>35</span>
+    	</a></li>
+     
+    	<li><a href="https://wangxin1248.github.io/categories#Python-ref">
+    		Python <span>49</span>
+    	</a></li>
+     
+    	<li><a href="https://wangxin1248.github.io/categories#MachineLearning-ref">
+    		MachineLearning <span>4</span>
+    	</a></li>
+     
+    	<li><a href="https://wangxin1248.github.io/categories#Flutter-ref">
+    		Flutter <span>2</span>
+    	</a></li>
+     
+    	<li><a href="https://wangxin1248.github.io/categories#SQL-ref">
+    		SQL <span>5</span>
+    	</a></li>
+     
+    	<li><a href="https://wangxin1248.github.io/categories#Ubiquitous%20computing-ref">
+    		Ubiquitous computing <span>3</span>
+    	</a></li>
+     
+    	<li><a href="https://wangxin1248.github.io/categories#Java-ref">
+    		Java <span>8</span>
+    	</a></li>
+    
+  
+
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 推荐网站部分 -->
+          <div class="tile is-child widget">
+            <div class="card">
+              <header class="card-header">
+                <p class="card-header-title nice-title">
+                  Recommended Websites
+                </p>
+              </header>
+              <div class="card-content">
+                <div class="content nice-text">
+                  <ul>
+                    <li>
+                      <a href="https://leetcode-cn.com/wangxin1248/">LeetCode-CN</a>
+                    </li>
+                    <li>
+                      <a href="http://blog.csdn.net/icarus_wang/">CSDN Blog</a>
+                    </li>
+                    <li>
+                      <a href="https://www.kaggle.com/wangxin1248">Kaggle</a>
+                    </li>
+                    <li>
+                      <a href="https://www.hackerrank.com/wangxin1248">HackerRank</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        Copyright (C) wangxin1248, All Rights Reserved.
+      </p>
+      <p>
+        Made with <a href="https://wangxin1248.github.io/resume.html">Xin Wang</a>, <a href="https://jekyllrb.com/">Jekyll</a>. Hosted on <a href="https://github.com/">Github</a><span id="busuanzi_container_site_uv" style="display: inline;">
+          .您是本站第<span id="busuanzi_value_site_uv">41637</span>位小伙伴
+        </span>
+      </p>
+      <p>
+        <a class="icon" href="https://github.com/wangxin1248">
+          <i class="fa fa-github" title="Github"></i>
+        </a>
+        <a class="icon" href="https://weibo.com/wangxin1248">
+          <i class="fa fa-weibo" title="Weibo"></i>
+        </a>
+        <a class="icon" href="mailto:wangxin1248@gmail.com">
+          <i class="fa fa-envelope" title="Email"></i>
+        </a>
+      </p>
+    </div>
+  </div>
+</footer>       
+<!-- js -->
+<script src="./MAC 安装 Maven ·_files/custom.js"></script>
+<script src="./MAC 安装 Maven ·_files/typewriter.js"></script>
+<!-- 访问人数统计改用新的域名 -->
+<script async="" src="./MAC 安装 Maven ·_files/busuanzi.pure.mini.js"></script>
+<!-- <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script> -->
+
+
+<iframe style="display: none;" src="./MAC 安装 Maven ·_files/saved_resource(1).html"></iframe><style type="text/css">.typewrite > .wrap { border-right: 0.08em solid #fff}</style></body></html>
