@@ -25,10 +25,18 @@
         <module name="antlrtest" />
         <module name="antlrTest" />
       </profile>
+      <profile default="false" name="Annotation profile for playscript-java" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="playscript-java" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="antlrTest" target="1.5" />
       <module name="antlrtest" target="1.5" />
+      <module name="playscript-java" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

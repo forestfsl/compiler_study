@@ -52,3 +52,9 @@ Exception in thread "main" java.lang.NoClassDefFoundError: Hello (wrong name: an
 
     ➜  06-11/14:40-/Users/forest/compiler_study/antlrTest/src/main/java git:(master) ✗ pwd
     /Users/forest/compiler_study/antlrTest/src/main/java
+
+
+从结果中看到，我们的词法分析器把每个 Token 都识别了，还记录了它们在代码中的位置、文本值、类别。
+上面这些都是 Token 的属性。以第二行[@1, 4:6=‘age’,< Id >,1:4]为例，其中 @1 是 Token 的流水编号，
+表明这是 1 号 Token；4:6 是 Token 在字符流中的开始和结束位置；age 是文本值，Id 是其 Token 类别；最后的 1:4
+ 表示这个 Token 在源代码中位于第 1 行、第 4 列。

@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/antlrTest/antlrTest.iml" filepath="$PROJECT_DIR$/antlrTest/antlrTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/compiler_study.iml" filepath="$PROJECT_DIR$/.idea/compiler_study.iml" />
+      <module fileurl="file://$PROJECT_DIR$/playscript-java/playscript-java.iml" filepath="$PROJECT_DIR$/playscript-java/playscript-java.iml" />
     </modules>
   </component>
 </project>

@@ -1,0 +1,6 @@
+➜  antlrtest git:(master) ✗ antlr PlayScript.g4
+➜  antlrtest git:(master) ✗ cd ..
+➜  java git:(master) ✗ javac antlrtest/*.java
+➜  java git:(master) ✗
+grun antlrtest.PlayScript expression -gui
+age + 10 * 2 + 10
