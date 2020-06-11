@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/antlrtest/antlrtest.iml" filepath="$PROJECT_DIR$/antlrtest/antlrtest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/antlrTest/antlrTest.iml" filepath="$PROJECT_DIR$/antlrTest/antlrTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/compiler_study.iml" filepath="$PROJECT_DIR$/.idea/compiler_study.iml" />
     </modules>
   </component>

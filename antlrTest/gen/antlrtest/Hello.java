@@ -1,4 +1,5 @@
-// Generated from Hello.g4 by ANTLR 4.7.2
+// Generated from /Users/forest/compiler_study/antlrTest/src/main/java/antlrtest/Hello.g4 by ANTLR 4.8
+package antlrtest;
 
 package antlrtest;
 
@@ -13,7 +14,7 @@ import org.antlr.v4.runtime.misc.*;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
 public class Hello extends Lexer {
-	static { RuntimeMetaData.checkVersion("4.7.2", RuntimeMetaData.VERSION); }
+	static { RuntimeMetaData.checkVersion("4.8", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =
